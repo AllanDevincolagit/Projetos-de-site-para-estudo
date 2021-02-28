@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset= "utf-8">
+		<title> tarefa1 </title>
+		<style>
+		body {color:#870F01;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>Tarefa 1</h1> <br>
+		<p> Operações aritiméticas </p>
+		<script>
+		let n1 = prompt('Digite um número')
+		n1 = parseInt(n1); /* Após colocar let xy prompt colocar xy parseint */
+
+		let n2 = prompt('Digite mais um número')
+		n2 = parseInt(n2);
+		
+		let sum = parseInt(n1) + parseInt(n2) /* As variáveis devem ser diferentes umas das outras ex: sum não pode se repetir assim como n1 pois dá erro. */
+		let subtraction = parseInt(n1) - parseInt(n2)
+		let multiplication = parseInt(n1) * parseInt(n2)
+		let division = parseInt(n1) / parseInt(n2)
+
+		document.write(`O valor de ${n1} e ${n2} é ${sum}.<br>`) /* Em documentwrite deve-se usar crase e não uma aspa e a tag br deve estar antes da crase */
+		document.write(`O valor de ${n1} e ${n2} é ${subtraction}.<br>`) 
+		document.write(`O valor de ${n1} e ${n2} é ${multiplication}.<br>`) 
+		document.write(`O valor de ${n1} e ${n2} é ${division}.`) 
+		</script>
+	</body>
+</html>	
