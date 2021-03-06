@@ -1,0 +1,84 @@
+body{
+    background-color:#FDFAF5 ;
+}
+
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+p{
+    text-align: center;
+    font-weight: bold;
+}
+
+.titulos td{
+    text-align: center;
+    background-color: #6B8DFF;
+    color:white;
+    font-weight: bold;
+}
+
+.celula td{
+    text-align: center;
+    background-color: #3870FF;
+    color: white;
+    font-weight: bold;
+}
+
+.celula2 td{
+    text-align: center;
+    background-color: #FDFAF5;
+    color: black;
+    font-weight: bold;
+}
+
+.celula3 td{
+    text-align: center;
+    background-color: #3870FF;
+    color: white;
+    font-weight: bold;
+}
+
+.celula4 td{
+    text-align: center;
+    background-color: #FDFAF5;
+    color: black;
+    font-weight: bold;
+}
+
+.celula5 td{
+    text-align: center;
+    background-color: #3870FF;
+    color: white;
+    font-weight: bold;
+}
+
+.celula6 td{
+    text-align: center;
+    background-color: #FDFAF5;
+    color: black;
+    font-weight: bold;
+}
+
+.celula7 td{
+    text-align: center;
+    background-color: #3870FF;
+    color: white;
+    font-weight: bold;
+}
+
+.celula8 td{
+    text-align: center;
+    background-color: #FDFAF5;
+    color: black;
+    font-weight: bold;
+}
+
+.celula9 td{
+    text-align: center;
+    background-color: #3870FF;
+    color: white;
+    font-weight: bold;
+}
+
