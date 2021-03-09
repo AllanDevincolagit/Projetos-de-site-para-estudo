@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Operações básicas</title>
+    </head>
+    <body>
+        <h1>Operações básicas</h1>
+        <p>Insira dois números para a resolução das operações.</p>
+
+        <script>
+            let n1 = parseFloat(prompt('Insira o primeiro número:'))
+             let n2 = parseFloat(prompt('Insira o segundo número:'))
+
+             let sum = n1 + n2 
+             let subtraction = n1 - n2 
+            let multiplication = n1 * n2 
+            let division = n1 / n2 
+
+             let rest = n1 % n2
+
+            document.write(`
+                <ul>
+                    <li>Entradas: <b>${n1}</b> e <b>${n2}</b>.</li>
+                     <li>Soma: <b>${sum}</b>.</li>
+                     <li>Subtração: <b>${subtraction}</b>.</li>
+                    <li>Multiplicação: <b>${multiplication}</b>.</li>
+                    <li>Divisão: <b>${division}</b>.</li>
+                    <li>Resto: <b>${rest}</b>.</li>
+                </ul>
+             `)
+         </script>
+    </body>
+</html>
