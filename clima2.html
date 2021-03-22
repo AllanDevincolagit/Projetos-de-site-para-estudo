@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="base.css">
+        <title>Clima</title>
+    </head>
+    <body>
+        <h1>Clima de hoje</h1>
+        <p>Escolha o clima atual.</p>
+
+        <form id="form" novalidate>
+            <input id="field1" type="text" placeholder="Qual o seu nome?">
+
+            <select id="field2" required>
+                <option value="">Qual é seu gênero?</option>
+                <option value="f">Feminino</option>
+                <option value="m">Masculino</option>
+            </select>
+
+            <button>Cumprimentar</button>
+        </form>
+
+        <div id="result"></div>
+
+        <script>
+            function onSubmit(event) {
+                event.preventDefault()
+
+            let name = field1.value
+            let gender = field2.value
+
+            if (!name) {
+                result.innerHTML = '<p class="negative">Por favor comente seu nome conforme solicitado.</p>'
+                field1.focus()
+            return
+             }
+
+            if (!gender) {
+                result.innerHTML = '<p class="negative">Por favor comente seu gênero conforme solicitado.</p>'
+                field2.focus()
+            return
+            }
+
+            if (gender === 'f') {
+                result.innerHTML = `<p class="women">Seja Bem-vinda , ${name}</p>`
+            } else {
+            result.innerHTML = `<p class="men">Seja Bem-vindo , ${name}</p>`
+            }
+            }
+
+            form.addEventListener('submit', onSubmit)
+        </script>
+    </body>
+</html>

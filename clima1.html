@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="base.css">
+        <title>Clima</title>
+    </head>
+    <body>
+        <h1>Exercício 07</h1>
+        <p>Escolha o clima atual</p>
+
+        <form id="form" novalidate>
+            <select id="field" required>
+                <option value="">Clima de hoje</option>
+                <option value="sunny">Ensolarado</option>
+                <option value="rainy">Chuvoso</option>
+                <option value="snowing">Nevando</option>
+                <option value="overcast">Nublado</option>
+            </select>
+
+            <button>Ver minha opinião</button>
+        </form>
+
+        <div id="result"></div>
+
+        <script>
+            function onSubmit(event) {
+                event.preventDefault()
+
+            let choice = field.value
+
+            if (choice === 'sunny') {
+                result.innerHTML = '<p>Está ensolarado.</p>'
+                document.body.style.backgroundImage = 'url("https://static8.depositphotos.com/1451970/915/v/600/depositphotos_9150302-stock-illustration-the-sun.jpg")'
+            } else if (choice === 'rainy') {
+                result.innerHTML = '<p>O clima está chuvoso.</p>'
+                document.body.style.backgroundImage = 'url("https://www.jornalcidademg.com.br/wp-content/uploads/2021/02/whatsapp-image-2020-08-21-at-17.45.37.jpeg")'
+            } else if (choice === 'snowing') {
+                result.innerHTML = '<p>Clima com baixas temperaturas e chance de neve.</p>'
+                document.body.style.backgroundImage = 'url("https://exame.com/wp-content/uploads/2020/08/Vai-Nevar-Em-SP-1.jpg")'
+            } else if (choice === 'overcast') {
+                result.innerHTML = '<p>Clima fechado leve um  guarda chuva!</p>'
+                document.body.style.backgroundImage = 'url("https://cdn.folhape.com.br/upload/dn_arquivo/2018/04/estrada.jpg")'
+            } else {
+                result.innerHTML = '<p class="negative">Quando eu pedir para responder algo, faça isso!</p>'
+                field.focus()
+                document.body.style.backgroundImage = ''
+            }
+            }
+            form.addEventListener('submit', onSubmit)
+        </script>
+   </body>
+</html>
