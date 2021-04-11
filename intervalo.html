@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <title>Intervalo</title>
+  </head>
+  <body>
+    <h1>Intervalo</h1>
+    <p>Exibe o intervalo  entre dois números  de forma decrescente.</p>
+
+    <form id="form" novalidate>
+      <input id="field1" type="number" placeholder="Informe um número">
+      <input id="field2" type="number" placeholder="Informe outro número">
+
+      <button>Exibir</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+      function onSubmit(event) {
+        event.preventDefault()
+
+     
+        let n1 = parseFloat(field1.value)
+        let n2 = parseFloat(field2.value)
+
+     
+        field1.className = ''
+        field2.className = ''
+
+        
+      if (isNaN(n1)) {
+        result.innerHTML = '<p class="negative">Por favor, informe o primeiro número corretamente!</p>'
+        field1.className = 'negative'
+        field1.focus()
+        return
+      }
+
+      if (isNaN(n2)) {
+        result.innerHTML = '<p class="negative">Por favor, informe o segundo número corretamente!</p>'
+        field2.className = 'negative'
+        field2.focus()
+        return
+      }
+
+      
+      let min = n1
+      let max = n2
+
+     
+      if (min > max) {
+        min = n2
+        max = n1
+      }
+
+      result.innerHTML = ''
+
+      for (let i = max; i > min; i--) {
+        result.innerHTML += `${i}, `
+      }
+
+      result.innerHTML += min
+    }
+
+    form.addEventListener('submit', onSubmit)
+  </script>
+</body>
+</html>
